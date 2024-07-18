@@ -29,7 +29,7 @@ def check_mcginley_crossover(ticker):
     mcginley = calculate_mcginley_dynamic(close_prices, 21)
     
     # Check if the last close price crosses above the McGinley Dynamic
-    if close_prices[0] > mcginley[0] and close_prices[-1] <= mcginley[-1]:
+    if close_prices[-1] > mcginley[-1] and close_prices[-2] <= mcginley[-2]:
         return True
     return False
 
